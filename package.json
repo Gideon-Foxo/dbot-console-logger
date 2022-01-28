@@ -1,0 +1,31 @@
+{
+  "name": "dbot-console-logger",
+  "version": "1.0.0",
+  "description": "Custom formatted console logs designed to be used in Discord bots!",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node package/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gideon-foxo/dbot-console-logger.git"
+  },
+  "keywords": [
+    "Discord",
+    "console",
+    "logger"
+  ],
+  "author": "Gideon Foxo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gideon-foxo/dbot-console-logger/issues"
+  },
+  "homepage": "https://github.com/Gideon-foxo/dbot-console-logger#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "moment": "^2.29.1"
+  }
+}
