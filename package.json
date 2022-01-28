@@ -2,7 +2,7 @@
   "name": "dbot-console-logger",
   "version": "1.0.0",
   "description": "Custom formatted console logs designed to be used in Discord bots!",
-  "main": "index.js",
+  "main": " package/index.js",
   "directories": {
     "test": "test"
   },
