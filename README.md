@@ -39,10 +39,10 @@ log.**debug**("text", "inspect (optional))
 log.**timestamp**()
 > Logs a timestamp to the console. Aliases: `t`, `ts`, `time` 
 
-log.**chalk**(<options>)
+log.**chalk**(options)
 > Passes chalk though. Learn more at https://www.npmjs.com/package/chalk. Aliases: `c`
 
-log.**moment**(<options>)
+log.**moment**(options)
 > Passes moment.js though. Learn more at https://momentjs.com/docs/. Aliases: `m`
 
 <h1 align="center">Support</h1>
