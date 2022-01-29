@@ -1,4 +1,3 @@
-process.env.FORCE_COLOR = "true"
 const chalk = require('chalk');
 const moment = require('moment');
 
@@ -6,10 +5,22 @@ const moment = require('moment');
 const config = require('./config.js');
 
 
+// This changes spacing if enabled or disabled
+let names = {
+    error: "Error",
+    warn: "Warn",
+    info: "Info",
+    debug: "Debug"
+} 
+if (config.spacing) names = {
+    warn: "Warn ",
+    info: "Info "
+}
+
+
 
 // This function returns a timestamp that is put
 const time = function() {
-
     // Sets the offset for the time stamps
     let t = moment().utcOffset(config.offset * 60)
     //Creates the timestamps. 
@@ -19,39 +30,55 @@ const time = function() {
 
 // Error logging
 const error = function (text, objects = null) {
-    console.log(`${time()} [${chalk.bold.ansi256("1")("Error")}] ${text}${(objects) ? "\n"+require("util").inspect(objects) : ""}`);
+    if (!config.error) return
+    console.log(`${time()} [${chalk.bold.ansi256(config.error)(names.error)}] ${text}${(objects) ? "\n"+require("util").inspect(objects) : ""}`);
 }
 
 // Warn logging
 const warn =  function (text, objects = null) {
-    console.log(`${time()} [${chalk.bold.ansi256(config.warn)("Warning")}] ${text}${(objects) ? "\n"+require("util").inspect(objects) : ""}`)
+    if (!config.warn) return
+    console.log(`${time()} [${chalk.bold.ansi256(config.warn)(names.warn)}] ${text}${(objects) ? "\n"+require("util").inspect(objects) : ""}`)
 }
 
 // Info logging
 const info =  function (text, objects = null) {
-    console.log(`${time()} [${chalk.bold.ansi256(config.info)("Info")}] ${text}${(objects) ? "\n"+require("util").inspect(objects) : ""}`)
+    if (!config.info) return
+    console.log(`${time()} [${chalk.bold.ansi256(config.info)(names.info)}] ${text}${(objects) ? "\n"+require("util").inspect(objects) : ""}`)
 }
 
 // Debug logging
 const debug =  function (text, objects = null) {
-    console.log(`${time()} [${chalk.bold.ansi256(config.debug)("Debug")}] ${text}${(objects) ? "\n"+require("util").inspect(objects) : ""}`)
-}
-
-// Test logging
-const test =  function (text, objects = null) {
-    console.log(`${time()} [${chalk.bold.ansi256(1)("Debug")}] ${text}${(objects) ? "\n"+require("util").inspect(objects) : ""}`)
+    if (!config.debug) return
+    console.log(`${time()} [${chalk.bold.ansi256(config.debug)(names.debug)}] ${text}${(objects) ? "\n"+require("util").inspect(objects) : ""}`)
 }
 
 
 
-
-
+// EXPOORRTTTT TIMMMEEEE!!!
 module.exports = {
-    time,
-    chalk,
     error,
+    err: error,
+    e: error,
+
     warn,
+    warning: warn,
+    w: warn,
+
     info,
+    i: info,
+
     debug,
-    test
+    db: debug,
+    d: debug,
+
+    time,
+    timestamp: time,
+    ts: time,
+    t: time,
+
+    chalk,
+    c: chalk,
+
+    moment,
+    m: moment
 }
