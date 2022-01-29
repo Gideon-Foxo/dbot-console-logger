@@ -13,6 +13,8 @@ let names = {
     debug: "Debug"
 } 
 if (config.spacing) names = {
+    error: names.error,
+    debug: names.debug,
     warn: "Warn ",
     info: "Info "
 }
