@@ -6,11 +6,11 @@ Custom formatted console logs designed to be used in Discord bots!
 
 Default logs
 
-![Without spacing](https://cdn.discordapp.com/attachments/833171605366243330/936844216800256040/unknown.png)
+![Without spacing](https://github.com/Gideon-Foxo/dbot-console-logger/assets/50521677/e585a7a0-828e-4ee4-8ff4-537e72dbe45c)
 
 Logs with spacing enabled
 
-![With spacing](https://cdn.discordapp.com/attachments/833171605366243330/936847660596469810/unknown.png)
+![With spacing](https://github.com/Gideon-Foxo/dbot-console-logger/assets/50521677/478e87ae-7c26-4720-8258-f0a0b068712d)
 
 After installing run `npm run test` for a full test and demo.
 
@@ -48,8 +48,3 @@ log.**moment**(options)
 <h1 align="center">Support</h1>
 
 If you need help or assistance please either ask in my [Discord server](https://discord.gg/q4jrwWPWEt) or [create a new issue](https://github.com/Gideon-foxo/dbot-console-logger/issues/new).
-
-
-
-
-
