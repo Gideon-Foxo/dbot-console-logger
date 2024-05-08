@@ -1,8 +1,8 @@
-const chalk = require('chalk');
-const moment = require('moment');
+import chalk from 'chalk'
+import moment from 'moment'
 
 // Import our config file. Here you can fine tune how this package works.
-const config = require('./config.js');
+import config from './config.js'
 
 
 // This changes spacing if enabled or disabled
@@ -57,7 +57,7 @@ const debug =  function (text, objects = null) {
 
 
 // EXPOORRTTTT TIMMMEEEE!!!
-module.exports = {
+export default {
     error,
     err: error,
     e: error,

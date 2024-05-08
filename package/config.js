@@ -1,4 +1,4 @@
-const config = {
+export default {
 
     // This is the offset for the hour that shows on the timestamps. Default EST
     offset: -5,
@@ -25,6 +25,3 @@ const config = {
     info: 123,
     debug: 36
 }
-
-
-module.exports = config;

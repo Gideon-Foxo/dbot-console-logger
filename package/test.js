@@ -1,12 +1,10 @@
-const log = require('./index.js');
-const config = require('./config.js');
-
+import log from './index.js'
+import config from './config.js'
 
 console.log("Shows your console support for chalk.")
-console.log(log.chalk.default.supportsColor);
-console.log("A list of all of the colors you can set in config.js")
+console.log(log.chalk.supportsColor);
+console.log("\n\nA list of all of the colors you can set in config.js\n")
 
-console.log("\n")
 for (let i = 0; i < 256; i++) console.log(log.chalk.bold.ansi256(i)(i +" this is a test"))
 console.log("\n")
 
